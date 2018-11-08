@@ -1,0 +1,212 @@
+@charset "UTF-8";
+/* 덮어쓰지않는 CSS 설정들 */
+
+/* 첫 페이지 css */
+#sec1-content{
+	position: absolute;
+	bottom: 20%;
+	margin-left: 20%;
+}
+
+#hello-world {
+	width: 723px;
+	height: 100px;
+	background-image: url('/img/hello.png');
+}
+
+#iam{
+	margin-top: 40px;
+	font-family: 'Dosis', sans-serif;
+    font-size: 100px;
+    text-align: left;
+    color: #999999;
+    font-weight: 200;
+    line-height: 100px;
+}
+
+/* 두번째 페이지 css */
+#out {
+	position: absolute;
+	top: 18%;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+#in {
+	display: inline-block;
+}
+
+#page-title {
+	text-align: left;
+	letter-spacing: 20px;
+	font-family: 'Lekton', sans-serif;
+	font-weight: 700;
+	font-size: 36px;
+	color: #666666;
+	/*color: #e1e1e1;*/
+}
+
+#content-out {
+	margin-top: 5%;
+	/*height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 30%;*/
+}
+
+#contents-contain {
+	/*display: inline;*/
+	/*height: 100%;
+	width: 100%;
+	position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;*/
+}
+
+#table-row {
+}
+
+#left-content {
+	text-align: right;
+	letter-spacing: 4px;
+	font-family: 'Poiret One', cursive;
+	font-weight: 300;
+	color: #888888;
+	font-size: 40px;
+}
+
+#right-content {
+	font-size: 12px;
+	text-align: left;
+}
+
+.right-element {
+	border-radius: 0.1em;
+	margin-right: 6px;
+	margin-bottom: 8px;
+	padding-left: 18px;
+	padding-right: 18px;
+	display: inline-block;
+	/*font-family: 'Dosis', sans-serif;
+	font-weight: 500;*/
+	font-family: 'Inconsolata', monospace;
+	font-weight: 400;
+	letter-spacing: 1px;
+	color: #fff;
+	font-size: 20px;
+	background-color: #339999;
+}
+
+/* 세번째 페이지 css */
+.thumbnails {
+	margin-top: 7%;
+}
+
+.image-btn {
+	display: inline-block;
+	/*background-color:gray;*/
+    margin:40px;
+    width:300px;
+    height:300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 0.2em;
+}
+
+#modal-height {
+	height: 600px;
+	background-color: #000;
+}
+
+#modal-inside {
+	height: 600px;
+}
+
+#img-div {
+	padding-right: 0px;
+	height: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#content-div {
+	height: 600px;
+	background-color: #fff;
+}
+
+/* 네번째 페이지 css */
+#footer-page {
+	width: 100%;
+	text-align: center;
+}
+
+#footer-row {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	height: 100%;
+}
+
+#left-title {
+	/*border-right: 1px dotted #333333;*/
+	box-shadow: 30px 0px 20px -30px #111;
+	padding-right: 50px;
+	padding-top: 40px;
+	padding-bottom: 100px;
+}
+
+#iam-sm{
+	/*margin-top: 40px;*/
+	font-family: 'Dosis', sans-serif;
+    font-size: 46px;
+    text-align: right;
+    color: #999999;
+    font-weight: 200;
+    line-height: 44px;
+}
+
+#right-box {
+	padding-left: 30px;
+	padding-top: 40px;
+}
+
+#about {
+	text-align: left;
+	font-family: 'Noto Sans KR', sans-serif; 
+	font-weight: 300; 
+	font-size: 16px; 
+	color: #888888;
+}
+
+.right-element-sm {
+	border-radius: 1em;
+	margin: 4px 4px 4px 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+	display: inline-block;
+	/*font-family: 'Dosis', sans-serif;
+	font-weight: 500;*/
+	font-family: 'Inconsolata', monospace;
+	font-weight: 400;
+	letter-spacing: 1px;
+	color: #fff;
+	font-size: 16px;
+	background-color: #339999;
+}
+
+#margin-con {
+	margin-bottom: 10px;	
+}
+
+#margin-con1 {
+	margin-bottom: 20px;
+}
+
