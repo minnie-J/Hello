@@ -19,8 +19,13 @@ public class ProjectsServiceImple implements ProjectsService {
 		return projectsMapper.selectAll();
 	}
 
+//	@Override
+//	public List<ProjectsDomain> selectByPno(int pno) {
+//		return projectsMapper.selectByPno(pno);
+//	}
+	
 	@Override
-	public List<ProjectsDomain> selectByPno(int pno) {
+	public ProjectsDomain selectByPno(int pno) {
 		return projectsMapper.selectByPno(pno);
 	}
 

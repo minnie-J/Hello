@@ -7,6 +7,7 @@ import hello.minhee.domain.ProjectsDomain;
 public interface ProjectsService {
 	
 	public List<ProjectsDomain> selectAll();
-	public List<ProjectsDomain> selectByPno(int pno);
+//	public List<ProjectsDomain> selectByPno(int pno);
+	public ProjectsDomain selectByPno(int pno);
 
 }

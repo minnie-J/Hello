@@ -18,126 +18,22 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
-<style>
-
-/* 웹폰트 적용 */
-@import url('https://fonts.googleapis.com/css?family=Doppio+One|Dosis:200,400,500|Inconsolata:400,700|Lekton:400,700|Nanum+Myeongjo:400,700|Poiret+One|Secular+One|Ubuntu+Mono:400,700|Noto+Sans+KR:300,400&effect=emboss');
-
-/* 상단 메뉴 링크 밑줄 방지 */
-a:hover {
-	text-decoration: none;
-}
-
-/* 클릭된 링크 , 버튼 점선 제거 */
-a:focus, 
-button:focus{
-	outline: none;
-}
-
-.image-btn:hover {
-	cursor: pointer;
-}
-
-/* 모달관련  */
-.modal {
-	position: fixed;
-	height: 100%;
-	z-index: 10000;
-}
-
-/* 모달 이미지 가로 세로 비율 */
-.carousel-inner img {
-	width: 100%;
-	/*height: auto;*/
-	height: 100%;
-}
-
-/* 모달 배경 흑막 opacity */  
-.modal-backdrop.show {
-	opacity: 0.8;
-}
-
-/* 모달 테두리, 모서리 라운딩 제거, 그림자 효과 약간  */
-.modal-content {
-	-webkit-border-radius: 0px !important;
-	-moz-border-radius: 0px !important;
-	border-radius: 0px !important;
-	border: 0px;
-	-webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-	box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-	-webkit-background-clip: padding-box;
-	-moz-background-clip: padding-box;
-}
-
-/* 모달 사이드 여백없이 */
-.modal-body {
-	padding: 0px;
-}
-
-/* 모달 indicator 모양 변경 */
-.carousel-indicators li {
-	width: 10px;
-	height: 10px;
-	margin-left: 4px;
-	margin-right: 4px;
-	border-radius: 100%;
-}
-
-/* 모달 next, prev 아이콘 변경 */
-/*.carousel-control-next-icon {
-    background-image: 
-}*/
-
-/* 모달 아이콘 위치 가장자리로 */
-.carousel-control-next,
-.carousel-control-prev {
-	width: 8%;
-}
-
-/* 한 페이지 이미지 풀배경일때  */
-#section-bg {
-	/* Full height */
-    height: 100%;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* 로고 */
-#logo, 
-#logo a{
-	top: 25px !important;
-    left: 80px !important;
-	/*font-family: 'Nanum Myeongjo', sans-serif;
-	font-weight: normal !important;
-	color: #cccccc !important;*/
-	display: block;
-	
-}
-
-/* 우측 상단 링크 메뉴 관련 */
-#menu a{
-	font-family: 'Dosis', sans-serif !important;
-	font-weight: 500;
-	color: #999999 !important;
-}
-
-#menu li.active a::after{
-	background: #d9d9d9 !important;
-	/*height: 1px !important;*/
-	bottom: -2px !important;
-}
-
-</style>
-
-<link rel="stylesheet" type="text/css" href="/css/page-detail.css">
-</head>
-<body>
 <!-- fullpage에 필요 -->
 <link rel="stylesheet" type="text/css" href="/css/fullpagecss.css">
+
+<!-- 나눔스퀘어 -->
+<link rel="stylesheet" href="//cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css">
+<!-- font-family: 'Nanum Square';
+font-weight : 300, 400, 700, 800 -->
+
+<!-- fullpage에 필요 -->
 <link rel="stylesheet" type="text/css" href="https://unpkg.com/fullpage.js/dist/fullpage.min.css">
+<link rel="stylesheet" type="text/css" href="/css/page-detail.css">
+</head>
+
+
+<body>
+
 
 	<div id="app">
 		<div id="logo">
@@ -163,10 +59,13 @@ button:focus{
 		
 		<!-- 첫 페이지 -->
 		<div id="section-bg" class="section">
-			<div id="sec1-content">
-				<div id="hello-world"></div>
-				<div id="iam">
-					I &nbsp;AM<br>JEONG &nbsp;MINHEE
+			<div id="sec1-out">
+				<div class="col-8" id="sec1-content">
+					<div id="hello-world"></div>
+					<div id="iam">
+						<!-- I &nbsp;AM<br>JEONG &nbsp;MINHEE -->
+						I AM<br>JEONG MINHEE
+					</div>
 				</div>
 			</div>
 		</div>
@@ -266,7 +165,8 @@ button:focus{
 	    				<div id="iam-sm">
 	    					I AM<br>
 							JEONG MINHEE<br>
-							<span style="font-family: 'Nanum Myeongjo', serif; font-weight: 400; font-size: 24px; color: #339999;">정민희</span>
+							<span style="font-family: 'Nanum Myeongjo', serif; font-weight: 400; font-size: 24px; color: #339999;">정민희</span><p>
+							<a href="https://github.com/minnie-J/Hello" target="_blank" title="GitHub"><img src="/img/GitHub-Mark-Light-64px.png" alt="GitHub" id="github"></a>&nbsp;
 						</div>
 	    			</div>
 	    			<div class="col" id="right-box">
@@ -285,7 +185,8 @@ button:focus{
 	       						<div class="right-element-sm">Bootstrap</div>
 	       						<div class="right-element-sm">Vue.js</div><br>
 	       						<div class="right-element-sm">Eclipse</div>
-	       						<div class="right-element-sm">GitHub</div>
+	       						<div class="right-element-sm">GitHub</div><br>
+	       						<span style="color: #339999">&nbsp;+ NAS에서 운영중 </span>
 	    					</div>
 	    					<div class="col">
 	    						<p>현재는 해상도 1920 × 1080 화면에 최적화되어 있습니다.</p>
@@ -301,51 +202,63 @@ button:focus{
 
 	<!-- The Modal -->
 	<div class="modal" id="myModal">
-		<div class="modal-dialog modal-lg modal-dialog-centered">
+		<!-- <div class="modal-dialog modal-lg modal-dialog-centered">-->
+			<div class="modal-dialog modal-dialog-centered" id="modal-width">
 			<div class="modal-content" id="modal-height">
+				<div class="row">
+					<!-- 프로젝트 이미지들 -->
+					<div id="img-div">
+						<div id="myCarousel" class="carousel" data-ride="carousel"
+							data-interval="false">
+							<!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
 
-				<!-- Modal Header -->
-				<!-- <div class="modal-header">
-          		<h4 class="modal-title">Modal Heading</h4>
-          		<button type="button" class="close" data-dismiss="modal">&times;</button>
-        		</div> -->
+							<!-- Indicators -->
+							<ul class="carousel-indicators" id="indicator"><!-- indicator 오는 자리--></ul>
 
-				<!-- Modal body -->
-				<div class="modal-body" id="modal-inside">
-					<div class="row">
-						<!-- 프로젝트 이미지들 -->
-						<div class="col-8" id="img-div">
-							<div id="myCarousel" class="carousel" data-ride="carousel"
-								data-interval="false">
-								<!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+							<!-- The slideshow -->
+							<div class="carousel-inner" id="inner-images"><!-- 이미지 슬라이드 오는 자리 --></div>
 
-								<!-- Indicators -->
-								<ul class="carousel-indicators" id="indicator"></ul>
+							<!-- Left and right controls -->
+							<a class="carousel-control-prev" href="#myCarousel"
+								data-slide="prev"> <span class="carousel-control-prev-icon"></span>
+							</a> <a class="carousel-control-next" href="#myCarousel"
+								data-slide="next"> <span class="carousel-control-next-icon"></span>
+							</a>
+						</div>
+					</div>
+					<div id="modal-inside">
+						<!-- Modal Header -->
+						<div class="modal-header">
+         			 		<div class="modal-title">
+         			 			<div id="project-category">안드로이드</div>
+         			 			<div id="project-title"></div>
+         			 			<div id="project-type">- Team(6명)</div>
+         			 		</div>
+          					<button type="button" class="close" data-dismiss="modal">&times;</button>
+        				</div>
 
-								<!-- The slideshow -->
-								<div class="carousel-inner" id="inner-images"></div>
-
-								<!-- Left and right controls -->
-								<a class="carousel-control-prev" href="#myCarousel"
-									data-slide="prev"> <span class="carousel-control-prev-icon"></span>
-								</a> <a class="carousel-control-next" href="#myCarousel"
-									data-slide="next"> <span class="carousel-control-next-icon"></span>
-								</a>
+						<!-- Modal body -->
+						<div class="modal-body">
+					
+							<!-- 프로젝트 설명 -->
+							<div id="content-div">
+								<!-- <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+								<div id="project-content"></div>
+								<form id="project-charge-title">
+									<fieldset>
+										<legend>담당역할</legend>
+										<div id="project-charge"></div>
+									</fieldset>
+								</form>
 							</div>
 						</div>
-						<!-- 프로젝트 설명 -->
-						<div class="col-4" id="content-div">
-							<button type="button" class="close" data-dismiss="modal">&times;</button>
-							제대로 나오는지 테스트
-						</div>
 
+						<!-- Modal footer -->
+						<div class="modal-footer">
+							<div id="project-download"></div>
+          					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        				</div>
 					</div>
-
-				<!-- Modal footer -->
-				<!-- <div class="modal-footer">
-          		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        		</div> -->
-
 				</div>
 			</div>
 		</div>
@@ -357,12 +270,14 @@ button:focus{
 	
 		$(document).ready(function() {
 			
-			// 처음 접속시 로고 숨기기
+			// 처음 접속시 로고 숨기기 - 로고 보이고 안보이고는 페이지 따라 vue에서
 			$('#logo').css('display', 'none');
 			
 			// 이미지 버튼 클릭하면 실행되는 메소드 - 모달실행, body 스크롤 방지
 			$('.image-btn').click(function() {
 				var pno = this.id;
+
+				getAboutProject(pno);
 				
 				getAllImages(pno);
 				
@@ -374,6 +289,38 @@ button:focus{
 			$("#myModal").on('hide.bs.modal', function(e){
 				fullpage_api.setAllowScrolling(true);
 			});
+			
+			// 클릭한 이미지 버튼에 해당되는 프로젝트 설명 가져오는 메소드
+			function getAboutProject(pno) {
+				$.getJSON('/' + pno, function(data) {
+					var title = data.title;
+					//var contentOri = data.content;
+					//var content = contentOri.replace(/(\n|\r\n)/g, '<br>');
+					var content = data.content;
+					var charge = data.charge;
+					var download = data.download;
+
+					$('#project-title').html(title);
+					$('#project-content').html(content);
+					$('#project-charge').html(charge);
+					$('#project-download').html(download);
+					
+					if(charge == null) {
+						$('#project-charge-title').css('display', 'none');
+					}
+					if(charge != null) {
+						$('#project-charge-title').css('display', 'block');
+					}
+					
+					if(download == null) {
+						$('.modal-footer').css('display', 'none');
+						$('.modal-body').css('height', '519px');
+					}
+					if(download != null) {
+						$('.modal-footer').css('display', 'block');
+					}
+				});
+			}
 			
 			// 클릭한 이미지 버튼에 해당되는 프로젝트 이미지 서버에서 불러오는 메소드
 			function getAllImages(pno) {

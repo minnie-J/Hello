@@ -3,6 +3,7 @@ new Vue({
     data: {
         options: {
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+        normalScrollElements: '#content-div',
         onLeave: function(origin, destination, direction){
     		var leavingSection = this;
     		var logo = document.getElementById("logo");
