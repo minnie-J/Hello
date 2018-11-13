@@ -7,16 +7,20 @@ public class ProjectsDomain {
 	private String charge;
 	private String thumbnail;
 	private String downlink;
+	private String category;
+	private String type;
 	
 	public ProjectsDomain() {}
 
-	public ProjectsDomain(int pno, String title, String content, String charge, String thumbnail, String downlink) {
+	public ProjectsDomain(int pno, String title, String content, String charge, String thumbnail, String downlink, String category, String type) {
 		this.pno = pno;
 		this.title = title;
 		this.content = content;
 		this.charge = charge;
 		this.thumbnail = thumbnail;
 		this.downlink = downlink;
+		this.category = category;
+		this.type = type;
 	}
 
 	public int getPno() {
@@ -66,7 +70,20 @@ public class ProjectsDomain {
 	public void setDownlink(String downlink) {
 		this.downlink = downlink;
 	}
-	
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
 	
 
 }

@@ -4,6 +4,11 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <head>
+<link rel="icon" href="/img/favicon_16.png" sizes="16x16">
+<link rel="icon" href="/img/favicon_32.png" sizes="32x32">
+<link rel="icon" href="/img/favicon_48.png" sizes="48x48">
+<link rel="icon" href="/img/favicon_64.png" sizes="64x64">
+<link rel="icon" href="/img/favicon_128.png" sizes="128x128">
 <meta charset="UTF-8">
 <title>Hello :)</title>
 
@@ -153,6 +158,10 @@ font-weight : 300, 400, 700, 800 -->
 						<div class="image-btn" id="${project.pno}" style="background-image: url('${project.thumbnail}')"></div>
 						<!-- <img src="${portfolio.thumbnail}" class="image-btn" id="${portfolio.pronum}"/>-->
 					</c:forEach>
+					<c:forEach begin="1" end="${fn:length(boardList)}">
+						<div id="img-wrap"></div>
+					</c:forEach>
+					
         		</div>
         	</div>
 		</div>
@@ -230,11 +239,14 @@ font-weight : 300, 400, 700, 800 -->
 						<!-- Modal Header -->
 						<div class="modal-header">
          			 		<div class="modal-title">
-         			 			<div id="project-category">안드로이드</div>
+         			 			<div id="project-info">
+         			 				<div id="project-category"></div>
+         			 				<div id="project-type"></div>
+         			 			</div>
          			 			<div id="project-title"></div>
-         			 			<div id="project-type">- Team(6명)</div>
          			 		</div>
-          					<button type="button" class="close" data-dismiss="modal">&times;</button>
+          					<!-- <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+          					<button type="button" class="close" data-dismiss="modal"><img src="/img/close.png" /></button>
         				</div>
 
 						<!-- Modal body -->
@@ -255,8 +267,14 @@ font-weight : 300, 400, 700, 800 -->
 
 						<!-- Modal footer -->
 						<div class="modal-footer">
-							<div id="project-download"></div>
-          					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<div>어플리케이션 테스트해보세요 :)</div>
+							<div id="project-down-div">
+								<!-- <div id="download-img"></div>-->
+								<a href="" id="project-downlink">
+									<img id="download-img" src="/img/download_before.png"/>
+								</a>
+							</div>
+          					<!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
         				</div>
 					</div>
 				</div>
@@ -298,12 +316,18 @@ font-weight : 300, 400, 700, 800 -->
 					//var content = contentOri.replace(/(\n|\r\n)/g, '<br>');
 					var content = data.content;
 					var charge = data.charge;
-					var download = data.download;
+					var downlink = data.downlink;
+					var category = data.category;
+					var type = data.type;
 
 					$('#project-title').html(title);
 					$('#project-content').html(content);
 					$('#project-charge').html(charge);
-					$('#project-download').html(download);
+					//$('#project-downlink').html(downlink);
+					$('#project-downlink').attr('href', downlink);
+					$('#project-category').html(category);
+					$('#project-type').html(type);
+
 					
 					if(charge == null) {
 						$('#project-charge-title').css('display', 'none');
@@ -312,12 +336,14 @@ font-weight : 300, 400, 700, 800 -->
 						$('#project-charge-title').css('display', 'block');
 					}
 					
-					if(download == null) {
+					if(downlink == null) {
 						$('.modal-footer').css('display', 'none');
-						$('.modal-body').css('height', '519px');
+						$('.modal-body').css('height', '508px');
+						$('#content-div').css('padding-right', '16px');
 					}
-					if(download != null) {
-						$('.modal-footer').css('display', 'block');
+					if(downlink != null) {
+						$('.modal-body').css('height', '426px');
+						$('.modal-footer').css('display', 'flex');
 					}
 				});
 			}
@@ -352,6 +378,7 @@ font-weight : 300, 400, 700, 800 -->
 	</script>
 
 <!-- fullpage에 필요 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.3/vendors/scrolloverflow.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
 <script src="https://unpkg.com/vue-fullpage.js/dist/vue-fullpage.js"></script>
 <script src="/js/fullpage-main.js"></script>
