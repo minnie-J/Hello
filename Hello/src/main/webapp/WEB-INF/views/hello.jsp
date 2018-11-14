@@ -63,10 +63,10 @@ font-weight : 300, 400, 700, 800 -->
 		<full-page :options="options" id="fullpage" ref="fullpage">
 		
 		<!-- 첫 페이지 -->
-		<div id="section-bg" class="section">
+		<div class="section">
 			<div id="sec1-out">
-				<div class="col-8" id="sec1-content">
-					<div id="hello-world"></div>
+				<div id="sec1-content">
+					<div id="hello"></div><div id="world"></div>
 					<div id="iam">
 						<!-- I &nbsp;AM<br>JEONG &nbsp;MINHEE -->
 						I AM<br>JEONG MINHEE
@@ -87,7 +87,7 @@ font-weight : 300, 400, 700, 800 -->
     				<div id="page-title">SKILLS <span style="font-size: 30px">&</span> EXPERIENCE</div>
         		</div>
   	      		<div id="content-out">	
-  	      			<div class="contents-contain">
+  	      			<div class="col" class="contents-contain">
 	           			<div class="row" id="table-row">
 	    					<div class="col" id="left-content">Language</div>
 	    					<div class="col" id="right-content">
@@ -118,6 +118,7 @@ font-weight : 300, 400, 700, 800 -->
 	        					<div class="right-element">Firebase Realtime Database</div>
                 			</div>
             			</div>
+            			
             			<div class="row" id="table-row">
 	    					<div class="col" id="left-content">WAS</div>
                				<div class="col" id="right-content">
